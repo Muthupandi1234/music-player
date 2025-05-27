@@ -1,0 +1,143 @@
+:root {
+  --bg01: linear-gradient(180deg, #f2f3f7 0%, #080808 100%);
+  --bg02: linear-gradient(135deg, #32504d, #545746);
+  --bg03: linear-gradient(135deg, #865088, #1a1d20);
+  --bg04: #0a0a0a;
+
+  --border01: #82b0df;
+  --border02: #dacfe7;
+
+  --shadow-light: rgba(44, 49, 54, 0.5);
+  --shadow-dark: rgba(21, 22, 24, 0.7);
+
+  --accent: #ff5722;
+  --accent-dark: #e64a19;
+  --text-light: #e4e4e4;
+  --text-muted: #9e9e9e;
+}
+
+* {
+  box-sizing: border-box;
+  margin: 0;
+  padding: 0;
+  font-family: 'Lato', sans-serif;
+}
+
+body {
+  background: var(--bg01);
+  color: var(--text-light);
+  height: 100vh;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+.wrapper {
+  max-width: 400px;
+  width: 100%;
+  padding: 20px;
+  background: var(--bg02);
+  border-radius: 20px;
+  box-shadow: 8px 8px 15px var(--shadow-dark), -8px -8px 15px var(--shadow-light);
+}
+
+header {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  margin-bottom: 1.5rem;
+}
+
+.htbtn {
+  background: var(--bg03);
+  border: 2px solid var(--border01);
+  color: var(--text-light);
+  width: 40px;
+  height: 40px;
+  border-radius: 50%;
+  font-size: 18px;
+  cursor: pointer;
+}
+
+.player {
+  text-align: center;
+}
+
+.img-area img {
+  width: 200px;
+  height: 200px;
+  border-radius: 50%;
+  object-fit: cover;
+  border: 8px solid var(--border02);
+}
+
+.song-details {
+  margin: 10px 0;
+}
+
+.progress-area {
+  height: 6px;
+  background: #f3f2f2;
+  border-radius: 5px;
+  cursor: pointer;
+  position: relative;
+  margin: 10px 0;
+}
+
+.progress-bar {
+  height: 100%;
+  width: 0%;
+  background: var(--accent);
+  border-radius: 5px;
+}
+
+.song-timer {
+  display: flex;
+  justify-content: space-between;
+  font-size: 14px;
+  color: var(--text-muted);
+}
+
+.controls {
+  display: flex;
+  justify-content: space-around;
+  margin: 20px 0;
+}
+
+.btnc {
+  background: var(--bg03);
+  border: none;
+  color: white;
+  font-size: 20px;
+  border-radius: 50%;
+  padding: 10px;
+  cursor: pointer;
+}
+
+.volume-control {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  gap: 10px;
+  margin: 10px 0;
+}
+
+.playlist ul {
+  list-style: none;
+  padding: 0;
+}
+
+.playlist li {
+  padding: 10px;
+  border-radius: 8px;
+  background: var(--bg03);
+  margin-bottom: 8px;
+  cursor: pointer;
+  transition: background 0.3s;
+}
+
+.playlist li:hover,
+.playlist li.active {
+  background: var(--accent-dark);
+  color: white;
+}
